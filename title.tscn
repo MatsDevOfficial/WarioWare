@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bnxtikkajcqlb"]
+
+[ext_resource type="Texture2D" uid="uid://di1uee3lcshbf" path="res://4a67020bba5c841c17d1abc295d72d55.jpg" id="1_y7k74"]
+[ext_resource type="Script" path="res://title.gd" id="2_oyqm6"]
+
+[node name="Title" type="Node2D" unique_id=781180541]
+script = ExtResource("2_oyqm6")
+
+[node name="Tt]itle" type="RichTextLabel" parent="." unique_id=1828778541]
+clip_contents = false
+offset_left = 286.0
+offset_top = -3.0
+offset_right = 953.0
+offset_bottom = 168.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "MatsIOWare"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=864087992]
+offset_left = -109.0
+offset_top = -861.0
+offset_right = 1337.0
+offset_bottom = 1565.3333
+texture = ExtResource("1_y7k74")
+expand_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=273446831]
+offset_left = 415.0
+offset_top = 141.0
+offset_right = 798.0
+offset_bottom = 362.0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1273895716]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=921552490]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Setting"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1588789319]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
