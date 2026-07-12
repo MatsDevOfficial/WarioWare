@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://ck8mt6n4c8gw2"]
+
+[ext_resource type="Script" uid="uid://fklely0fyvuv" path="res://minigame_2.gd" id="1_3qiw4"]
+[ext_resource type="Texture2D" uid="uid://die0nq1qg52er" path="res://772d9acc3cbce6f320a323cdaca6db91.jpg" id="1_ksr4o"]
+[ext_resource type="Texture2D" uid="uid://rpr3fe3k23uk" path="res://image-removebg-preview.png" id="2_vdqgs"]
+[ext_resource type="Script" uid="uid://cpwwrt0ssa8y1" path="res://button_1.gd" id="3_5x31c"]
+[ext_resource type="PackedScene" uid="uid://tvufrtga5xbv" path="res://timer.tscn" id="4_3qiw4"]
+
+[node name="minigame_2" type="Node2D" unique_id=1074895292]
+script = ExtResource("1_3qiw4")
+
+[node name="Background" type="TextureRect" parent="." unique_id=886748227]
+offset_right = 1587.0
+offset_bottom = 845.0
+texture = ExtResource("1_ksr4o")
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=180654082]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=556149288]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_vdqgs")
+texture_pressed = ExtResource("2_vdqgs")
+texture_hover = ExtResource("2_vdqgs")
+texture_disabled = ExtResource("2_vdqgs")
+texture_focused = ExtResource("2_vdqgs")
+script = ExtResource("3_5x31c")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=1328528474]
+offset_left = 248.0
+offset_top = 475.0
+offset_right = 332.0
+offset_bottom = 566.0
+texture_normal = ExtResource("2_vdqgs")
+texture_pressed = ExtResource("2_vdqgs")
+texture_hover = ExtResource("2_vdqgs")
+texture_disabled = ExtResource("2_vdqgs")
+texture_focused = ExtResource("2_vdqgs")
+script = ExtResource("3_5x31c")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1802268307]
+offset_left = 544.0
+offset_top = 101.0
+offset_right = 628.0
+offset_bottom = 192.0
+texture_normal = ExtResource("2_vdqgs")
+texture_pressed = ExtResource("2_vdqgs")
+texture_hover = ExtResource("2_vdqgs")
+texture_disabled = ExtResource("2_vdqgs")
+texture_focused = ExtResource("2_vdqgs")
+script = ExtResource("3_5x31c")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1879910428]
+offset_left = 831.0
+offset_top = 439.0
+offset_right = 915.0
+offset_bottom = 530.0
+texture_normal = ExtResource("2_vdqgs")
+texture_pressed = ExtResource("2_vdqgs")
+texture_hover = ExtResource("2_vdqgs")
+texture_disabled = ExtResource("2_vdqgs")
+texture_focused = ExtResource("2_vdqgs")
+script = ExtResource("3_5x31c")
+
+[node name="Timer" parent="." unique_id=1295904455 instance=ExtResource("4_3qiw4")]
+position = Vector2(887, 39)
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]

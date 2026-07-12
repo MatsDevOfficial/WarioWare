@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bbxkahafx66rj"]
+
+[ext_resource type="Texture2D" uid="uid://my40k6p3jq51" path="res://75847a77658836d5b75021b84846aa25.jpg" id="1_7iq1s"]
+[ext_resource type="Script" uid="uid://cmp08woyjg1y5" path="res://deadscreen.gd" id="1_ge7ku"]
+[ext_resource type="Texture2D" uid="uid://co84q211ld4go" path="res://66e16094-7db4-421a-9f63-bfddfbff56dd.jpg" id="1_q6r4n"]
+[ext_resource type="Texture2D" uid="uid://bhyc1c1xownk5" path="res://9b974bc9eaa6ccb8a4e679d978736cce.jpg" id="2_q6r4n"]
+[ext_resource type="Texture2D" uid="uid://dfx0vfoocq6ql" path="res://1974e6a27a476d54de81bd4ac4ccbc0d.jpg" id="3_ge7ku"]
+
+[node name="Node2D" type="Node2D" unique_id=16324743]
+script = ExtResource("1_ge7ku")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=634443305]
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 1164.0
+offset_bottom = 670.0
+texture = ExtResource("1_q6r4n")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=172032634]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=768892834]
+oversampling_override = 1.0
+title = "Ur Dead"
+initial_position = 4
+size = Vector2i(353, 158)
+visible = true
+ok_button_text = "TRY AGAIN"
+dialog_text = "Well, yea. You failed. You failed
+spectacularly. Even that idiot af a Mario
+wasn't as stupid as you. Your mother would
+be ashamed of you if she saw you. "
+dialog_close_on_escape = false
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=991270839]
+offset_left = 836.0
+offset_top = -2.0
+offset_right = 1151.0
+offset_bottom = 255.0
+texture = ExtResource("1_7iq1s")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=257378194]
+offset_top = 234.0
+offset_right = 449.0
+offset_bottom = 648.0
+texture = ExtResource("2_q6r4n")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=224824747]
+offset_left = 699.0
+offset_top = 242.0
+offset_right = 1148.0
+offset_bottom = 656.0
+texture = ExtResource("3_ge7ku")
+expand_mode = 1
+
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
