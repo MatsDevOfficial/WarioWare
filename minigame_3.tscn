@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dh3thnadn1aov"]
+
+[ext_resource type="Script" path="res://minigame_3.gd" id="1_gqi5c"]
+[ext_resource type="PackedScene" uid="uid://tvufrtga5xbv" path="res://timer.tscn" id="2_5xr8p"]
+
+[node name="Minigame3" type="Node2D" unique_id=1486622038]
+script = ExtResource("1_gqi5c")
+
+[node name="Timer" parent="." unique_id=1295904455 instance=ExtResource("2_5xr8p")]

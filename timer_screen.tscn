@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dt6thgjpop4jr"]
+
+[ext_resource type="Script" uid="uid://cvrckvgsfnlpy" path="res://timer_screen.gd" id="1_mjy2p"]
+[ext_resource type="PackedScene" uid="uid://tvufrtga5xbv" path="res://timer.tscn" id="2_ue55m"]
+
+[sub_resource type="Texture2D" id="Texture2D_mjy2p"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="Texture2D" id="Texture2D_ue55m"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="Texture2D" id="Texture2D_c84u7"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="Texture2D" id="Texture2D_ai4b2"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="Texture2D" id="Texture2D_bd6ax"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="Texture2D" id="Texture2D_swdq4"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="Texture2D" id="Texture2D_vylsn"]
+resource_local_to_scene = false
+resource_name = ""
+
+[node name="TimerScreen" type="Node2D" unique_id=345241152]
+script = ExtResource("1_mjy2p")
+
+[node name="Background2" type="TextureRect" parent="." unique_id=1689080990]
+texture = SubResource("Texture2D_mjy2p")
+expand_mode = 1
+
+[node name="LevelLabel" type="RichTextLabel" parent="." unique_id=254152627]
+custom_minimum_size = Vector2(300, 100)
+offset_left = 520.0
+offset_top = 300.0
+offset_right = 520.0
+offset_bottom = 300.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" parent="." unique_id=1295904455 instance=ExtResource("2_ue55m")]
+position = Vector2(91, 365)
+
+[node name="Background" type="TextureRect" parent="." unique_id=1804107707]
+texture = SubResource("Texture2D_ue55m")
+expand_mode = 1
+
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=407362144]
+offset_left = 470.0
+offset_top = 80.0
+offset_right = 470.0
+offset_bottom = 80.0
+alignment = 1
+
+[node name="garlic1" type="TextureRect" parent="GarlicContainer" unique_id=1208742992]
+layout_mode = 2
+texture = SubResource("Texture2D_c84u7")
+expand_mode = 2
+
+[node name="garlic2" type="TextureRect" parent="GarlicContainer" unique_id=258152143]
+layout_mode = 2
+texture = SubResource("Texture2D_ai4b2")
+expand_mode = 2
+
+[node name="garlic3" type="TextureRect" parent="GarlicContainer" unique_id=1537795566]
+layout_mode = 2
+texture = SubResource("Texture2D_bd6ax")
+expand_mode = 2
+
+[node name="garlic4" type="TextureRect" parent="GarlicContainer" unique_id=1798983723]
+layout_mode = 2
+texture = SubResource("Texture2D_swdq4")
+expand_mode = 2
+
+[node name="garlic5" type="TextureRect" parent="GarlicContainer" unique_id=937077408]
+layout_mode = 2
+texture = SubResource("Texture2D_vylsn")
+expand_mode = 2

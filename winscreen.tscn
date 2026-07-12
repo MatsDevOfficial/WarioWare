@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cmfdvkhpm1jjk"]
+
+[ext_resource type="Script" uid="uid://m2ydip0ty4tw" path="res://winscreen.gd" id="1_ehxyi"]
+[ext_resource type="Texture2D" uid="uid://21jalee1nnu0" path="res://cea64093469f3587cdc70e8429fb67be.jpg" id="1_h3yos"]
+[ext_resource type="Texture2D" uid="uid://d1mk286f3h6if" path="res://b3977eb8576d1a21477435dcdf700e30.jpg" id="2_ehxyi"]
+
+[sub_resource type="Animation" id="Animation_pd04t"]
+length = 3.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2gb7w"]
+_data = {
+&"win": SubResource("Animation_pd04t")
+}
+
+[node name="winscreen" type="Node2D" unique_id=589686398]
+script = ExtResource("1_ehxyi")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1728497724]
+offset_left = -4.0
+offset_top = -81.0
+offset_right = 1151.0
+offset_bottom = 729.0
+texture = ExtResource("1_h3yos")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1941725057]
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 505.0
+offset_bottom = 429.0
+texture = ExtResource("2_ehxyi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=49217437]
+libraries/ = SubResource("AnimationLibrary_2gb7w")
